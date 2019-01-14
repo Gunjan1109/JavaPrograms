@@ -5,7 +5,7 @@ class Month
 	public static void main(String args[]) {
 		int a,n;
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter 0 to exit from the program");
+        System.out.println("Enter a number between 1 and 12");
         do
         {
         	n = input.nextInt();
@@ -37,10 +37,9 @@ class Month
 						break;
 				default: System.out.println("Please enter number only between 1 and 12");		
 
-				
-
-
-        	}
-        }while(n!=0);
+			}
+			System.out.print("Do you want to continue (Press 1 to contiue and 0 to exit");
+			a=  input.nextInt();
+        }while(a==1);
 	}
 }

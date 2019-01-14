@@ -10,15 +10,17 @@ class Sum
 		System.out.println("Enter the value of x and no of terms");
 		x = input.nextInt();
 		n = input.nextInt();
-		for(i = 1, j =1; i<n+1; ++i,j++)
+		for(i = 2, j =i-1; i<n+1; ++i,j++)
 		{
 			ans*= j;
 		
- 		   sum = sum + ((i-1)*x)/ans;
+ 		   sum = sum + ((i-2)*x)/ans;
  		   if(j==1)
  		   	--j;
 		}
-		int s = sum+1;
+		int s = sum;
+		if(x == 1)
+			s = 1;
 		System.out.println("Sum is " + s);
 
 	}
