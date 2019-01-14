@@ -7,5 +7,6 @@ class Display
        System.out.println("Float occupy " + Float.BYTES +" bytes");
        System.out.println("Maximum value of int occupy " + Integer.MAX_VALUE +" bytes");
        
+       
 	}
 }
