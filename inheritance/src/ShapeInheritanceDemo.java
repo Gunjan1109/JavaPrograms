@@ -2,7 +2,7 @@ import java.util.*;
 class Shape{
 	public void displayMsg(){
 		System.out.println("This is a shape");
-	}
+	} 
 }
 class Circle extends Shape{
 	int radius;

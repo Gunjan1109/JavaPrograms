@@ -4,12 +4,6 @@ class Rectangle{
 	 double lenght;
 	 double width;
 
-	double getLenght(){
-		return lenght;
-	}
-	double getWidth(){
-		return width;
-	}
 	void setDimension(double lenght, double width){
 		this.lenght = lenght;
 		this.width = width;
@@ -34,15 +28,13 @@ class Rectangle{
 class Box extends Rectangle{
 	 double height;
 
-
+    void setHeight(double h){
+    	height=h;
+    }
 	void setDimension(double lenght, double width,double height){
 		this.lenght = lenght;
 		this.width = width;
 		this.height = height;
-	}
-	double getheight(){
-		height = input.nextDouble();
-		return height;
 	}
 	
 	double Volume(){
@@ -55,16 +47,17 @@ class Box extends Rectangle{
 }
 class BoxDemo{
 	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
 		double l,w,h,a,v,p;
 		System.out.println("Enter lenght and width for Rectangle");
 		Box B = new Box();
-		l = B.getLenght();
-		w = B.getWidth();	
+		l = input.nextDouble();
+		w = input.nextDouble();
 		B.setDimension(l,w);
 		B.displayR();
-		l =B.getLenght();
-		w = B.getWidth();
-		h = B.getheight();
+		l = input.nextDouble();
+		w = input.nextDouble();
+		h = input.nextDouble();
 		B.setDimension(l,w,h);
 		B.display();
 	}
